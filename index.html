@@ -6,16 +6,33 @@
 	<style type="text/css">
 		canvas{
 			border: 1px solid black;
+			padding-left: 0;
+    		padding-right: 0;
+    		margin-left: auto;
+    		margin-right: auto;
+    		display: block;
 		}
 	</style>
 </head>
 <body>
 <img src="bilder/fg.png" id="fg-img" hidden>
-<img src="bilder/bg.png" id="bg-img" hidden>	
+<img src="bilder/gulag.svg" id="bg-img" hidden>	
 <img src="bilder/tree.png" id="tree-img" hidden>
-<img src="bilder/player.png" id="pl-img" hidden>
+<img src="bilder/player.svg" id="pl-img" hidden>
 <img src="bilder/kula.png" id="kula-img" hidden>
-<canvas id="canvas" height="600" width="800"></canvas>
+<img src="bilder/fiende.png" id="fiende-img" hidden>
+<img src="bilder/exp.png" id="exp-img" hidden>
+<img src="bilder/snö.svg" id="snö-img" hidden>
+<audio id="pew">
+	<source src="bilder/pew2.mp3" type="audio/mpeg">
+</audio>
+<audio id="kabpow">
+	<source src="bilder/kabpow.mp3" type="audio/mpeg">
+</audio>
+<audio id="death">
+	<source src="bilder/death.mp3" type="audio/mpeg">
+</audio>
+<canvas id="canvas" height="600" width="1200"></canvas>
 <script src="skit.js"></script>
 </body>
 </html>
