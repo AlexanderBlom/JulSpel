@@ -9,7 +9,8 @@
 <body>
 	<nav class="navbar navbar-expand-lg bg-dark">
 		<ul class="nav">
-			<li><a class="navbar-brand nav-link" href="index.html">Spela</a></li>
+			<li><a class="navbar-brand nav-link" href="index.html">Hem</a></li>
+			<li><a class="navbar-brand nav-link" href="spel.html">Spela</a></li>
 			<li><a class="navbar-brand nav-link" href="highscore.php">Highscore</a></li>
 		</ul>
 	</nav>

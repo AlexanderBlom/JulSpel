@@ -1,7 +1,11 @@
-		html{
+		html, h1, p{
 			font-family: 'Mountains of Christmas', cursive;
 		}
 		
+		p{
+			font-size: 25px;
+		}
+
 		canvas{
 			border: 1px solid black;
 			padding-left: 0;
