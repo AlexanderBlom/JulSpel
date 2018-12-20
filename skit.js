@@ -31,7 +31,8 @@ let
 	pew = document.getElementById("pew"),
 	kabpow = document.getElementById("kabpow"),
 	death = document.getElementById("death"),
-	snowImg = document.getElementById("snö-img");
+	snowImg = document.getElementById("snö-img"),
+	name;
 
 window.onload = init;
 
@@ -187,12 +188,13 @@ function checkColl(){
 	for(let i = 0; i < enemies.length; i++){
 		if((player.x + 128) >= enemies[i].x && player.x <= (enemies[i].x + enemies[i].w) &&
 			player.y <= enemies[i].y && (player.y + 128) >= enemies[i].y){
+			name = window.prompt("Du förlorade. Skriv ditt namn för att spara dina poäng");
+			makeRequest(name);
 			player.x = 0;
 			player.y = 0;
 			enemies = [];
 			death.play();
 			score = 0;
-			alert("Du förloade");
 		}
 	}
 }
@@ -209,6 +211,28 @@ function drawScore(){
 	ctx.font = "16px Arial";
 	ctx.fillStyle  = "#FFFFFF";
 	ctx.fillText("Score: " + score, 8, 20);
+}
+
+function makeRequest(name) {
+	httpRequest = new XMLHttpRequest();
+
+	if (!httpRequest) {
+		console.log("Failed to create request instance");
+		return false;
+	}
+	httpRequest.onreadystatechange = alertContents;
+	httpRequest.open('GET', 'highscore.php?name=' + name + '&score=' + score);
+	httpRequest.send();
+}
+
+function alertContents() {
+	if (httpRequest.readyState === XMLHttpRequest.DONE) {
+		if (httpRequest.status === 200) {
+				console.log(httpRequest.responseText);
+		} else {
+			console.log("There was a problem with the request.");
+		}
+	}
 }
 
 function Player(x, y, img){
