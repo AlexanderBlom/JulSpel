@@ -182,10 +182,10 @@ function checkColl(){
 	for(let i = 0; i < enemies.length; i++){
 		if((player.x + 128) >= enemies[i].x && player.x <= (enemies[i].x + enemies[i].w) &&
 			player.y <= enemies[i].y && (player.y + 128) >= enemies[i].y){
-			var name = prompt("Du förlorade. Skriv ditt namn för att spara dina poäng");
+			/*var name = prompt("Du förlorade. Skriv ditt namn för att spara dina poäng");
 			if(name && name) {
 				makeRequest();
-			}
+			}*/
 			player.x = 0;
 			player.y = 0;
 			enemies = [];
