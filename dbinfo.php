@@ -1,5 +1,5 @@
 <?php
 	$dbuser = "root";
 	$dbpass = "";
-	$db = "julspel";
+	$db = "soloäventyr";
 ?>

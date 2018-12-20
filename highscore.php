@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style type="text/css">
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-	</style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet">
 	<title>Highscore</title>
 </head>
 <body>
+	<nav class="navbar navbar-expand-lg bg-dark">
+		<ul class="nav">
+			<li><a class="navbar-brand nav-link" href="index.html">Spela</a></li>
+			<li><a class="navbar-brand nav-link" href="highscore.php">Highscore</a></li>
+		</ul>
+	</nav>
 	<h2>Highscore</h2>
-	<table>
+	<table class="table">
 		<tr>
 			<th>Player</th>
 			<th>Score</th>
